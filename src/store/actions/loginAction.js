@@ -39,7 +39,7 @@ export const login = (email, password) => {
       password: password
     };
     console.log(authData);
-    axios.post("http://13.127.104.4:8000/candidate/api/v1/login/", authData)
+    axios.post("loginurl", authData)
       .then(response => {
         dispatch(loginSuccess(response.data.token, response.data.email))
       })
@@ -56,7 +56,7 @@ export const logoutAction = (token) => {
       const headers = {
         'Authorization': "Token " + token
       };
-      axios.post("http://13.127.104.4:8000/candidate/api/v1/logout/", {}, {headers: headers})
+      axios.post("logout url", {}, {headers: headers})
 
     }
     localStorage.removeItem("token");
