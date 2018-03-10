@@ -1,0 +1,12 @@
+.Logo h3 {
+  font-weight: bold;
+  color: white;
+}
+
+.Logo:hover {
+  cursor: pointer;
+}
+
+.Logo h3:hover {
+  color: #004D40;
+}

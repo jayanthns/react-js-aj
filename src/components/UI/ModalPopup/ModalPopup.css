@@ -1,0 +1,143 @@
+.modal {
+  display: block; /* show by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.FORM {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px 40px 40px;
+  max-width: 680px;
+  margin: 40px auto;
+  border-radius: 4px;
+  /*-webkit-box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
+  /*box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
+}
+
+.FIELD_WRAP {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Modal Content */
+.modal_content {
+  position: relative;
+  background-color: #13232F;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  max-width: 680px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal_header {
+  padding: 2px 16px;
+  background-color: #13232F;
+  color: white;
+  text-align: center;
+  height: 35px;
+}
+
+.modal_body {
+  /*padding: 2px 16px;*/
+}
+
+.modal_footer {
+  padding: 2px 16px;
+  background-color: #303b47;
+  color: white;
+  text-align: center;
+}
+
+
+.BUTTON {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #009688;
+  color: #ffffff;
+  box-shadow: 1px 1px 1px #0C9;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  height:43px;
+  max-width: 200px;
+}
+
+.ButtonGroup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.BUTTON:hover, .BUTTON:focus {
+  background: #007b6d;
+  cursor: pointer;
+}
+
+.BUTTON_BLOCK {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .modal_content {
+    width: 80%;
+  }
+
+  .FORM {
+    width: 70%;
+  }
+
+  .BUTTON {
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
