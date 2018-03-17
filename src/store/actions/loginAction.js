@@ -1,5 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios'
+import { LOCAL_MAIN_URL, LOGIN_URL, CREATE_ACCOUNT_URL } from '../../constants/urls';
 
 export const loginStart = () => {
   return {
@@ -31,16 +32,16 @@ export const logout = () => {
 };
 
 export const login = (email, password) => {
-  console.log(email, password);
   return dispatch => {
     dispatch(loginStart());
     const authData = {
       email: email,
       password: password
     };
-    console.log(authData);
-    axios.post("loginurl", authData)
+    console.log(LOCAL_MAIN_URL+LOGIN_URL);
+    axios.post(LOCAL_MAIN_URL+LOGIN_URL, authData, {})
       .then(response => {
+        console.log(response.data.token, response.data.email);
         dispatch(loginSuccess(response.data.token, response.data.email))
       })
       .catch(err => {

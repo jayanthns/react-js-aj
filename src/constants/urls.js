@@ -1,0 +1,9 @@
+const SECURE = 'https://';
+const INSECURE = 'http://';
+const PORT = 'PORT NUMBER HERE';
+
+export const SERVER_MAIN_URL = INSECURE + 'MAIN HOST HERE' + PORT;
+export const LOCAL_MAIN_URL = INSECURE + 'LOCALHOST HERE:' + PORT;
+
+export const LOGIN_URL = 'LOGIN URL HERE';
+export const CREATE_ACCOUNT_URL = 'CREATE USER OR REGISTER URL HERE';
