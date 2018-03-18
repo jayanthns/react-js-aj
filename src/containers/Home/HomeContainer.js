@@ -13,7 +13,7 @@ class HomeContainer extends Component {
     return !this.props.token ?
       (<Redirect to="/login"/>) :
       (
-        <ModalPopup />
+        <span>HOME PAGE</span>
       );
   }
 }

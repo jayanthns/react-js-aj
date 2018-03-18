@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios'
-import { LOCAL_MAIN_URL, LOGIN_URL, CREATE_ACCOUNT_URL } from '../../constants/urls';
+import { LOCAL_MAIN_URL, LOGIN_URL, CREATE_ACCOUNT_URL, SERVER_MAIN_URL } from '../../constants/urls';
 
 export const loginStart = () => {
   return {

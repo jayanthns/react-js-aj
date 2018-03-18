@@ -11,9 +11,11 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import loginReducer from './store/reducers/loginReducer';
+import registerReducer from './store/reducers/registerReducer';
 
 const rootReducer = combineReducers({
-  login: loginReducer
+  login: loginReducer,
+  register: registerReducer,
 });
 
 const store = createStore(rootReducer, composeWithDevTools(
