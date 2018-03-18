@@ -51,7 +51,7 @@ export const register = (username, email, password, repassword) => {
       password: password,
       confirm_password: repassword
     };
-    axios.post(LOCAL_MAIN_URL+CREATE_ACCOUNT_URL, registerData, {})
+    axios.post(SERVER_MAIN_URL+CREATE_ACCOUNT_URL, registerData, {})
       .then(response => {
         console.log("SUCCESS", response.data);
         dispatch(registerSuccess(response.data.token, response.data.email));

@@ -39,7 +39,7 @@ export const login = (email, password) => {
       password: password
     };
     console.log(LOCAL_MAIN_URL+LOGIN_URL);
-    axios.post(LOCAL_MAIN_URL+LOGIN_URL, authData, {})
+    axios.post(SERVER_MAIN_URL+LOGIN_URL, authData, {})
       .then(response => {
         console.log(response.data.token, response.data.email);
         dispatch(loginSuccess(response.data.token, response.data.email))
