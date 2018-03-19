@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios'
 import { LOCAL_MAIN_URL, SERVER_MAIN_URL, CHECK_EMAIL_URL, CREATE_ACCOUNT_URL } from '../../constants/urls';
+import {loginSuccess} from "./loginAction";
 
 export const checkEmail = (emailExist) => {
   return {
@@ -55,6 +56,7 @@ export const register = (username, email, password, repassword) => {
       .then(response => {
         console.log("SUCCESS", response.data);
         dispatch(registerSuccess(response.data.token, response.data.email));
+        dispatch(loginSuccess(response.data.token, response.data.email));
       })
       .catch(err => {
         dispatch(registerFail("Cannot create account at this time"));
